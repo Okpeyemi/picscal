@@ -2,12 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const menuItems = [
   { name: 'Blog', href: '/blog' },
+  { name: 'Offre Spéciale', href: '/offre-speciale', special: true },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -55,9 +56,17 @@ export function Header() {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                      className={cn(
+                        "block duration-150",
+                        item.special 
+                          ? "text-primary hover:text-primary/80 font-semibold relative after:absolute after:inset-0 after:bg-primary/10 after:rounded-full after:blur-sm after:-z-10" 
+                          : "text-muted-foreground hover:text-accent-foreground"
+                      )}
                     >
-                      <span>{item.name}</span>
+                      <span className="flex items-center gap-1.5">
+                        {item.name}
+                        {item.special && <Gift className="w-4 h-4 animate-pulse" />}
+                      </span>
                     </Link>
                   </li>
                 ))}
@@ -71,9 +80,17 @@ export function Header() {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className={cn(
+                          "block duration-150",
+                          item.special 
+                            ? "text-primary hover:text-primary/80 font-semibold" 
+                            : "text-muted-foreground hover:text-accent-foreground"
+                        )}
                       >
-                        <span>{item.name}</span>
+                        <span className="flex items-center gap-2">
+                          {item.name}
+                          {item.special && <Gift className="w-5 h-5 animate-pulse" />}
+                        </span>
                       </Link>
                     </li>
                   ))}

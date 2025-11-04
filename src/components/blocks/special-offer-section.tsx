@@ -1,0 +1,269 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Gift, Globe, Palette, Zap, CheckCircle2, Calendar, Users, Sparkles, Clock } from 'lucide-react';
+import Link from 'next/link';
+
+export function SpecialOfferSection() {
+  const features = [
+    {
+      icon: Globe,
+      title: "Site Web Complet",
+      description: "Page d'accueil, à propos, contact et design responsive"
+    },
+    {
+      icon: Palette,
+      title: "Design Personnalisé",
+      description: "Adapté à votre identité et vos besoins spécifiques"
+    },
+    {
+      icon: Zap,
+      title: "Prêt à l'Emploi",
+      description: "Livré clé en main avec nom de domaine ou sous-domaine"
+    },
+    {
+      icon: Users,
+      title: "Aucune Compétence Requise",
+      description: "Pas besoin de connaissances techniques pour gérer votre site"
+    }
+  ];
+
+  const included = [
+    "Page d'accueil professionnelle",
+    "Section À propos",
+    "Formulaire de contact simple",
+    "Design responsive (mobile, tablette, desktop)",
+    "Option blog léger ou portfolio selon demande",
+    "Sous-domaine",
+    "Hébergement inclus",
+    "Support technique de base"
+  ];
+
+  const timeline = [
+    { week: "Semaine 1", status: "Gagnant annoncé le lundi", completed: false },
+    { week: "Semaine 2", status: "Gagnant annoncé le lundi", completed: false },
+    { week: "Semaine 3", status: "Gagnant annoncé le lundi", completed: false },
+    { week: "Semaine 4", status: "Gagnant annoncé le lundi", completed: false }
+  ];
+
+  return (
+    <div className="relative min-h-screen bg-background overflow-hidden py-16">
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-border mb-6"
+          >
+            <Gift className="w-5 h-5 text-primary" />
+            <span className="text-foreground font-medium">Offre Spéciale Limitée</span>
+          </motion.div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-sans bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
+            4 Sites Web Gratuits
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto font-mono">
+            Un site web offert à une personne différente chaque semaine pendant 1 mois
+          </p>
+          
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono">
+            Dans un esprit de <span className="text-primary font-semibold">partage</span> et de <span className="text-primary font-semibold">découverte</span>
+          </p>
+        </motion.div>
+
+        {/* Main Offer Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16 shadow-lg"
+        >
+          <div className="flex items-start gap-4 mb-8">
+            <div className="p-3 bg-primary text-primary-foreground rounded-2xl">
+              <Sparkles className="w-8 h-8" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold font-sans text-foreground mb-2">L&apos;Offre en Détail</h2>
+              <p className="text-muted-foreground font-mono">Tout ce que vous recevrez, gratuitement</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="flex items-start gap-4 p-4 bg-muted/10 rounded-xl border border-border/60 hover:border-primary/50 transition-colors"
+              >
+                <div className="p-2 bg-primary/15 rounded-lg">
+                  <feature.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold font-sans text-foreground mb-1">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm font-mono">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="bg-muted/10 rounded-2xl p-6 border border-border/60">
+            <h3 className="text-xl font-bold font-sans text-foreground mb-4 flex items-center gap-2">
+              <CheckCircle2 className="w-6 h-6 text-primary" />
+              Fonctionnalités Incluses
+            </h3>
+            <div className="grid md:grid-cols-2 gap-3">
+              {included.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 + index * 0.05 }}
+                  className="flex items-center gap-2 text-muted-foreground font-mono"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>{item}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold font-sans text-foreground mb-2 flex items-center justify-center gap-2">
+              <Calendar className="w-8 h-8 text-primary" />
+              Planning de l&apos;Offre
+            </h2>
+            <p className="text-muted-foreground font-mono">4 semaines, 4 gagnants</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-4">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7 + index * 0.1 }}
+                className="relative bg-muted/10 backdrop-blur-sm border border-border/60 rounded-2xl p-6 text-center hover:border-primary/50 transition-all hover:scale-105"
+              >
+                {/* Badge de statut */}
+                <div className="absolute top-3 right-3">
+                  {item.completed ? (
+                    <div className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary rounded-full">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span className="text-xs font-semibold">Réalisé</span>
+                    </div>
+                  ) : (
+                    <div className="inline-flex items-center gap-1 px-2 py-1 bg-muted/50 text-muted-foreground rounded-full">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span className="text-xs font-semibold">En attente</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="text-4xl font-bold text-primary mb-2">{index + 1}</div>
+                <div className="text-lg font-semibold font-sans text-foreground mb-1">{item.week}</div>
+                <div className="text-sm text-muted-foreground font-mono">{item.status}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Types of Sites */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16"
+        >
+          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Types de Sites Proposés</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { type: "Site Vitrine", desc: "Présentation de votre activité, services et coordonnées" },
+              { type: "Portfolio", desc: "Mise en valeur de vos créations et réalisations" },
+              { type: "Blog / Page de Présentation", desc: "Partage de contenu et expression personnelle" }
+            ].map((site, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 + index * 0.1 }}
+                className="bg-muted/10 rounded-xl p-6 border border-border/60 hover:border-primary/50 transition-colors"
+              >
+                <h3 className="text-xl font-bold font-sans text-foreground mb-2">{site.type}</h3>
+                <p className="text-muted-foreground font-mono">{site.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="text-center"
+        >
+          <div className="bg-primary text-primary-foreground rounded-3xl p-12 shadow-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold font-sans mb-4">
+              Intéressé(e) par cette offre ?
+            </h2>
+            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-mono">
+              Contactez-moi pour participer à cette aventure et peut-être être l&apos;un des 4 heureux gagnants !
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-bold rounded-full hover:bg-background/90 transition-all hover:scale-105 shadow-lg"
+            >
+              <Gift className="w-5 h-5" />
+              Postuler Maintenant
+            </Link>
+            <p className="text-primary-foreground/80 mt-6 text-sm font-mono">
+              Places limitées • 100% gratuit • Aucun engagement
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Additional Info */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="mt-16 text-center text-muted-foreground font-mono"
+        >
+          <p className="text-lg mb-2">
+            <span className="text-primary font-semibold">Pourquoi cette offre ?</span>
+          </p>
+          <p className="max-w-3xl mx-auto">
+            Je crois au pouvoir du partage et de l&apos;entraide. 
+            Cette initiative me permet de contribuer à votre projet tout en développant mon expertise. 
+            Ensemble, créons quelque chose d&apos;unique !
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

@@ -34,7 +34,7 @@ export function Footer() {
                   placeholder="votre@email.com"
                   className="flex-1 h-11 rounded-xl border border-border/60 bg-background/50 backdrop-blur-sm px-4 text-sm placeholder:text-muted-foreground focus:border-primary/30 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-200"
                 />
-                <Button size="default" className="rounded-xl font-sans px-6">
+                <Button size="default" className="rounded-xl font-sans px-6 cursor-pointer">
                   S&apos;abonner
                 </Button>
               </div>

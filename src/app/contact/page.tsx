@@ -5,6 +5,13 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { AnimatedGroup } from '@/components/ui/animated-group';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export const metadata: Metadata = {
   title: 'Contact - Devis Gratuit & Consultation IA',
@@ -152,50 +159,49 @@ export default function ContactPage() {
 
                     <div>
                       <Label htmlFor="projectType">Type de projet *</Label>
-                      <select 
-                        id="projectType" 
-                        name="projectType" 
-                        required
-                        className="mt-2 w-full h-10 px-3 py-2 text-sm bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      >
-                        <option value="">Sélectionnez un type de projet</option>
-                        <option value="automation">Automatisation des processus IA</option>
-                        <option value="webapp">Site web / Application</option>
-                        <option value="chatbot">Chatbot intelligent</option>
-                        <option value="integration">Intégration CRM/ERP</option>
-                        <option value="audit">Audit & conseil</option>
-                        <option value="other">Autre</option>
-                      </select>
+                      <Select name="projectType" required>
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Sélectionnez un type de projet" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="automation">Automatisation des processus IA</SelectItem>
+                          <SelectItem value="webapp">Site web / Application</SelectItem>
+                          <SelectItem value="chatbot">Chatbot intelligent</SelectItem>
+                          <SelectItem value="integration">Intégration CRM/ERP</SelectItem>
+                          <SelectItem value="audit">Audit & conseil</SelectItem>
+                          <SelectItem value="other">Autre</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div>
                       <Label htmlFor="budget">Budget envisagé</Label>
-                        <select 
-                        id="budget" 
-                        name="budget"
-                        className="mt-2 w-full h-10 px-3 py-2 text-sm bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                        >
-                        <option value="">Non défini</option>
-                        <option value="lt-250k">Moins de 250 000 FCFA</option>
-                        <option value="250k-500k">250 000 - 500 000 FCFA</option>
-                        <option value="500k-1M">500 000 - 1 000 000 FCFA</option>
-                        <option value="1M+">Plus de 1 000 000 FCFA</option>
-                        </select>
+                      <Select name="budget">
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Non défini" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="lt-250k">Moins de 250 000 FCFA</SelectItem>
+                          <SelectItem value="250k-500k">250 000 - 500 000 FCFA</SelectItem>
+                          <SelectItem value="500k-1M">500 000 - 1 000 000 FCFA</SelectItem>
+                          <SelectItem value="1M+">Plus de 1 000 000 FCFA</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div>
                       <Label htmlFor="timeline">Délai souhaité</Label>
-                      <select 
-                        id="timeline" 
-                        name="timeline"
-                        className="mt-2 w-full h-10 px-3 py-2 text-sm bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      >
-                        <option value="">Non défini</option>
-                        <option value="urgent">Urgent (&lt; 1 mois)</option>
-                        <option value="short">Court terme (1-3 mois)</option>
-                        <option value="medium">Moyen terme (3-6 mois)</option>
-                        <option value="long">Long terme (6+ mois)</option>
-                      </select>
+                      <Select name="timeline">
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Non défini" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="urgent">Urgent (&lt; 1 mois)</SelectItem>
+                          <SelectItem value="short">Court terme (1-3 mois)</SelectItem>
+                          <SelectItem value="medium">Moyen terme (3-6 mois)</SelectItem>
+                          <SelectItem value="long">Long terme (6+ mois)</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { HeroSection } from "@/components/blocks/hero-section-1"
+import { SpecialOfferBanner } from "@/components/blocks/special-offer-banner"
 import { WhyAiWebSection } from "@/components/blocks/why-ai-web-section"
 import { TargetAudienceSection } from "@/components/blocks/target-audience-section"
 import { ServicesSection } from "@/components/blocks/services-section"
@@ -76,6 +77,7 @@ export default function Home() {
       />
 
       <HeroSection />
+      <SpecialOfferBanner />
       <WhyAiWebSection />
       <TargetAudienceSection />
       <ServicesSection />
