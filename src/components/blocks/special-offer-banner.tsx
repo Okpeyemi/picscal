@@ -1,10 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Gift, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { ApplicationFormModal } from './application-form-modal';
 
 export function SpecialOfferBanner() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative py-16 overflow-hidden">
       {/* Background gradient */}
@@ -98,12 +101,12 @@ export function SpecialOfferBanner() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
-                <Link
-                  href="/contact"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-primary-foreground font-semibold rounded-full border-2 border-primary-foreground hover:bg-primary-foreground/10 transition-all"
                 >
                   <span>Postuler maintenant</span>
-                </Link>
+                </button>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-primary-foreground/90 font-mono">
@@ -186,6 +189,12 @@ export function SpecialOfferBanner() {
           </div>
         </motion.div>
       </div>
+
+      {/* Modal */}
+      <ApplicationFormModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }

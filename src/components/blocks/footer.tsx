@@ -52,7 +52,7 @@ export function Footer() {
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span>© {currentYear} Picscal. Tous droits réservés.</span>
               <span className="hidden sm:inline">•</span>
-              <span className="text-xs">Fait avec ❤️ au Bénin par <a href="https://portfolio.maqsoud.tech" target="_blank" rel="noopener noreferrer">Maqsoud</a></span>
+              <span className="text-xs">Fait avec ❤️ au Bénin par <a href="https://portfolio.maqsoud.tech" className="font-black" target="_blank" rel="noopener noreferrer">Maqsoud</a></span>
             </div>
             
             <div className="flex items-center gap-4 text-xs text-muted-foreground">

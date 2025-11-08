@@ -359,6 +359,121 @@ export default function BlogArticlePage() {
               </div>
             </section>
 
+            {/* Critères de sélection */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold font-sans mb-6">Critères de Sélection</h2>
+              
+              <p className="text-muted-foreground font-mono mb-8 leading-relaxed">
+                Pour garantir que cette offre profite à ceux qui en ont vraiment besoin, voici comment j&apos;évalue les candidatures :
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                {/* Qualité du projet - 30% */}
+                <div className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-3xl font-bold text-primary">30%</div>
+                    <h3 className="text-xl font-bold font-sans">Qualité du projet</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Clarté de la description</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Pertinence du besoin</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Potentiel d&apos;impact</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Motivation - 25% */}
+                <div className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-3xl font-bold text-primary">25%</div>
+                    <h3 className="text-xl font-bold font-sans">Motivation</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Authenticité de la démarche</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Engagement dans le projet</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Préparation - 20% */}
+                <div className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-3xl font-bold text-primary">20%</div>
+                    <h3 className="text-xl font-bold font-sans">Préparation</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Contenu disponible</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Clarté des objectifs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Idées précises</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Urgence/Besoin - 15% */}
+                <div className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-3xl font-bold text-primary">15%</div>
+                    <h3 className="text-xl font-bold font-sans">Urgence / Besoin</h3>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Timing du projet</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>Absence de solution actuelle</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Diversité - 10% */}
+              <div className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-3xl font-bold text-primary">10%</div>
+                  <h3 className="text-xl font-bold font-sans">Diversité</h3>
+                </div>
+                <ul className="grid md:grid-cols-2 gap-2 text-muted-foreground font-mono text-sm">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Variété des secteurs</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <span>Mix des types de sites</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-6 bg-primary/5 rounded-xl border border-primary/20 p-6">
+                <p className="text-muted-foreground font-mono text-sm italic text-center">
+                  💡 Ces critères me permettent d&apos;offrir cette opportunité aux projets les plus prometteurs et authentiques. Soyez transparent et détaillé dans votre candidature !
+                </p>
+              </div>
+            </section>
+
             {/* FAQ */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold font-sans mb-6">Questions fréquentes</h2>
@@ -408,7 +523,7 @@ export default function BlogArticlePage() {
                     Voir l&apos;offre complète
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/offre-speciale"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-primary-foreground font-semibold rounded-full border-2 border-primary-foreground hover:bg-primary-foreground/10 transition-all"
                   >
                     Postuler maintenant

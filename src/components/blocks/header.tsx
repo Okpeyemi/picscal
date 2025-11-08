@@ -57,7 +57,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "block duration-150",
+                        "block duration-150 font-medium",
                         item.special 
                           ? "text-primary hover:text-primary/80 font-semibold relative after:absolute after:inset-0 after:bg-primary/10 after:rounded-full after:blur-sm after:-z-10" 
                           : "text-muted-foreground hover:text-accent-foreground"

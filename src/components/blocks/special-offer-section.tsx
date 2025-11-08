@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Gift, Globe, Palette, Zap, CheckCircle2, Calendar, Users, Sparkles, Clock } from 'lucide-react';
-import Link from 'next/link';
+import { ApplicationFormModal } from './application-form-modal';
 
 export function SpecialOfferSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const features = [
     {
       icon: Globe,
@@ -309,11 +311,153 @@ export function SpecialOfferSection() {
           </div>
         </motion.div>
 
+        {/* Selection Criteria */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.65, duration: 0.6 }}
+          className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16"
+        >
+          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Critères de Sélection</h2>
+          <p className="text-center text-muted-foreground font-mono mb-8 max-w-2xl mx-auto">
+            Pour garantir que cette offre profite à ceux qui en ont vraiment besoin, voici comment j&apos;évalue les candidatures
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Qualité du projet */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.75 }}
+              className="bg-muted/10 rounded-xl p-6 border border-border/60"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl font-bold text-primary">30%</div>
+                <h3 className="text-xl font-bold font-sans text-foreground">Qualité du projet</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Clarté de la description</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Pertinence du besoin</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Potentiel d&apos;impact</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Motivation */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+              className="bg-muted/10 rounded-xl p-6 border border-border/60"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl font-bold text-primary">25%</div>
+                <h3 className="text-xl font-bold font-sans text-foreground">Motivation</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Authenticité de la démarche</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Engagement dans le projet</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Préparation */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.85 }}
+              className="bg-muted/10 rounded-xl p-6 border border-border/60"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl font-bold text-primary">20%</div>
+                <h3 className="text-xl font-bold font-sans text-foreground">Préparation</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Contenu disponible</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Clarté des objectifs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Idées précises</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Urgence/Besoin */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.9 }}
+              className="bg-muted/10 rounded-xl p-6 border border-border/60"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl font-bold text-primary">15%</div>
+                <h3 className="text-xl font-bold font-sans text-foreground">Urgence / Besoin</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground font-mono text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Timing du projet</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Absence de solution actuelle</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* Diversité */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.95 }}
+            className="mt-6 bg-muted/10 rounded-xl p-6 border border-border/60"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="text-3xl font-bold text-primary">10%</div>
+              <h3 className="text-xl font-bold font-sans text-foreground">Diversité</h3>
+            </div>
+            <ul className="grid md:grid-cols-2 gap-2 text-muted-foreground font-mono text-sm">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Variété des secteurs</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Mix des types de sites</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          <p className="text-center text-muted-foreground font-mono text-sm mt-6 italic">
+            Ces critères me permettent d&apos;offrir cette opportunité aux projets les plus prometteurs et authentiques
+          </p>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
+          transition={{ delay: 1, duration: 0.6 }}
           className="text-center"
         >
           <div className="bg-primary text-primary-foreground rounded-3xl p-12 shadow-2xl">
@@ -321,17 +465,17 @@ export function SpecialOfferSection() {
               Intéressé(e) par cette offre ?
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-mono">
-              Contactez-moi pour réserver l&apos;une des deux places disponibles cette semaine et recevoir votre site en 7 jours chrono.
+              Contactez-moi pour participer à cette aventure et peut-être être l&apos;un des 4 heureux gagnants !
             </p>
-            <Link
-              href="/offre-speciale/formulaire"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-bold rounded-full hover:bg-background/90 transition-all hover:scale-105 shadow-lg"
             >
               <Gift className="w-5 h-5" />
-              Déposer ma candidature
-            </Link>
+              Postuler Maintenant
+            </button>
             <p className="text-primary-foreground/80 mt-6 text-sm font-mono">
-              2 places par semaine • Livraison en 7 jours • Réponse sous 24h
+              Places limitées • 100% gratuit • Aucun engagement
             </p>
           </div>
         </motion.div>
@@ -353,6 +497,12 @@ export function SpecialOfferSection() {
           </p>
         </motion.div>
       </div>
+
+      {/* Modal */}
+      <ApplicationFormModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }
