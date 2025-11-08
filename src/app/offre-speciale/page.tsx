@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import { SpecialOfferSection } from "@/components/blocks/special-offer-section";
 
 export const metadata: Metadata = {
-  title: "Offre Spéciale - 4 Sites Web Gratuits",
-  description: "Chaque semaine pendant 1 mois, je crée gratuitement un site web personnalisé (vitrine, portfolio, blog). Aucune connaissance technique requise. Dans un esprit de partage et découverte.",
+  title: "Offre Spéciale - 2 Sites Web Gratuits par Semaine",
+  description: "Chaque semaine, je crée gratuitement jusqu'à 2 sites web personnalisés (vitrine, portfolio, blog). Aucune connaissance technique requise. Offre à places limitées pour un accompagnement sur-mesure.",
   alternates: {
     canonical: 'https://picscal.maqsoud.tech/offre-speciale',
   },
   openGraph: {
-    title: "Offre Spéciale - 4 Sites Web Gratuits | Picscal",
-    description: "Un site web gratuit offert chaque semaine pendant 1 mois. Site vitrine, portfolio ou blog personnalisé, prêt à l'emploi.",
+    title: "Offre Spéciale - 2 Sites Web Gratuits par Semaine | Picscal",
+    description: "Jusqu'à 2 sites web gratuits offerts chaque semaine. Sites vitrines, portfolios ou blogs personnalisés, livrés en 7 jours après sélection.",
     url: 'https://picscal.maqsoud.tech/offre-speciale',
   },
 };
@@ -24,8 +24,8 @@ export default function OffreSpecialePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Offer",
-            "name": "Site Web Gratuit - Offre Spéciale",
-            "description": "Création gratuite d'un site web personnalisé chaque semaine pendant 1 mois",
+            "name": "Site Web Gratuit - Offre Spéciale (2 par semaine)",
+            "description": "Création gratuite de deux sites web personnalisés sélectionnés chaque semaine",
             "price": "0",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/LimitedAvailability",
@@ -41,8 +41,13 @@ export default function OffreSpecialePage() {
             },
             "eligibleQuantity": {
               "@type": "QuantitativeValue",
-              "value": 4,
-              "unitText": "sites"
+              "value": 2,
+              "unitText": "sites par semaine"
+            },
+            "deliveryLeadTime": {
+              "@type": "QuantitativeValue",
+              "value": 7,
+              "unitCode": "DAY"
             }
           })
         }}

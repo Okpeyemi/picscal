@@ -4,9 +4,9 @@ import { Calendar, Clock, ArrowLeft, Gift, CheckCircle2, Sparkles } from "lucide
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Offre Spéciale : 4 Sites Web Gratuits en 1 Mois",
+  title: "Offre Spéciale : 2 Sites Web Gratuits par Semaine",
   description:
-    "Découvrez notre initiative unique : 4 sites web gratuits offerts pendant 1 mois. Site vitrine, portfolio ou blog personnalisé, prêt à l'emploi. Postulez maintenant !",
+    "Découvrez notre initiative unique : 2 sites web gratuits offerts chaque semaine. Site vitrine, portfolio ou blog personnalisé, livré en 7 jours après sélection. Postulez maintenant !",
   alternates: {
     canonical: "https://picscal.maqsoud.tech/blog/offre-4-sites-gratuits",
   },
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://picscal.maqsoud.tech/blog/offre-4-sites-gratuits",
     siteName: "Picscal",
-    title: "Offre Spéciale : 4 Sites Web Gratuits en 1 Mois",
+    title: "Offre Spéciale : 2 Sites Web Gratuits par Semaine",
     description:
-      "Découvrez notre initiative unique : 4 sites web gratuits offerts pendant 1 mois. Postulez maintenant !",
+      "Découvrez notre initiative unique : 2 sites web gratuits offerts chaque semaine. Postulez maintenant !",
     publishedTime: new Date().toISOString(),
     authors: ["Équipe Picscal"],
   },
@@ -27,9 +27,9 @@ export default function BlogArticlePage() {
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: "Offre Spéciale : 4 Sites Web Gratuits en 1 Mois",
+    headline: "Offre Spéciale : 2 Sites Web Gratuits par Semaine",
     description:
-      "Découvrez notre initiative unique : 4 sites web gratuits offerts pendant 1 mois.",
+      "Découvrez notre initiative unique : 2 sites web gratuits offerts chaque semaine.",
     image: "/og-image.jpg",
     datePublished: new Date().toISOString(),
     dateModified: new Date().toISOString(),
@@ -70,7 +70,7 @@ export default function BlogArticlePage() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Offre Spéciale : 4 Sites Web Gratuits",
+        name: "Offre Spéciale : 2 Sites Web Gratuits par Semaine",
         item: "https://picscal.maqsoud.tech/blog/offre-4-sites-gratuits",
       },
     ],
@@ -111,12 +111,17 @@ export default function BlogArticlePage() {
           </div>
 
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Une Initiative Unique : 4 Sites Web Gratuits en 1 Mois
+            Une Initiative Unique : 2 Sites Web Gratuits par Semaine
           </h1>
 
           <p className="font-mono text-xl text-muted-foreground mb-8">
-            Dans un esprit de partage et de découverte, j&apos;offre gratuitement un site web personnalisé chaque semaine pendant 1 mois.
+            Dans un esprit de partage et de découverte, j&apos;offre gratuitement jusqu&apos;à <strong className="text-foreground">2 sites web personnalisés par semaine</strong>, livrés en 7 jours après sélection.
           </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-sm font-mono text-primary">
+            <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/30">Offre limitée : 2 places hebdomadaires</span>
+            <span className="px-3 py-1 rounded-full bg-primary/10 border border-primary/30">Sélection transparente &amp; formulaire détaillé</span>
+          </div>
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono">
             <div className="flex items-center gap-2">
@@ -142,8 +147,8 @@ export default function BlogArticlePage() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center space-y-4 p-8">
                 <Gift className="w-20 h-20 text-primary mx-auto" />
-                <p className="text-2xl font-bold font-sans">4 Sites Web Gratuits</p>
-                <p className="text-muted-foreground font-mono">Un site offert chaque semaine</p>
+                <p className="text-2xl font-bold font-sans">2 Sites Web Gratuits / Semaine</p>
+                <p className="text-muted-foreground font-mono">Livraison en 7 jours après sélection</p>
               </div>
             </div>
           </div>
@@ -161,7 +166,7 @@ export default function BlogArticlePage() {
               </p>
               <p className="text-muted-foreground font-mono leading-relaxed">
                 Cette initiative me permet de contribuer concrètement à votre projet. 
-                C&apos;est une opportunité gagnant-gagnant : vous obtenez un <strong className="text-foreground">site professionnel gratuit</strong>, et je continue à développer mon expertise.
+                C&apos;est une opportunité gagnant-gagnant : vous obtenez un <strong className="text-foreground">site professionnel gratuit</strong>, et je continue à développer mon expertise tout en gardant un volume maîtrisé de deux projets par semaine.
               </p>
             </section>
 
@@ -245,23 +250,23 @@ export default function BlogArticlePage() {
                 {[
                   {
                     step: "1",
-                    title: "Postulez",
-                    desc: "Contactez-moi via le formulaire de contact en expliquant votre projet et vos besoins.",
+                    title: "Inscription",
+                    desc: "Remplissez le formulaire avec les informations clés de votre projet (objectifs, contenus, délais).",
                   },
                   {
                     step: "2",
-                    title: "Sélection",
-                    desc: "Chaque lundi, j'annonce le gagnant de la semaine. 4 gagnants au total sur 1 mois.",
+                    title: "Sélection transparente",
+                    desc: "Chaque semaine, 2 projets sont retenus selon l'ordre d'arrivée, la clarté des besoins et la faisabilité.",
                   },
                   {
                     step: "3",
-                    title: "Création",
-                    desc: "Je développe votre site personnalisé en fonction de vos besoins et de votre identité.",
+                    title: "Kick-off",
+                    desc: "Un appel de cadrage est organisé sous 48h pour préciser contenus et attentes.",
                   },
                   {
                     step: "4",
-                    title: "Livraison",
-                    desc: "Vous recevez votre site clé en main, prêt à être utilisé, avec un guide de prise en main.",
+                    title: "Livraison en 7 jours",
+                    desc: "Vous recevez votre site clé en main avec un guide de prise en main et un support de base.",
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex gap-6">
@@ -275,6 +280,50 @@ export default function BlogArticlePage() {
                   </div>
                 ))}
               </div>
+            </section>
+
+            {/* Sélection transparente */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold font-sans mb-6">Comment se fait la sélection ?</h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                {[{
+                  title: "Ordre d'arrivée prioritaire",
+                  desc: "Les dossiers complets sont étudiés dans l'ordre de réception pour garantir l'équité."
+                }, {
+                  title: "Critères simples",
+                  desc: "Pertinence du projet, clarté des besoins et capacité à fournir les contenus essentiels."
+                }, {
+                  title: "Tirage en cas d'égalité",
+                  desc: "Si plusieurs projets sont ex-aequo, un tirage au sort départage les candidatures."
+                }].map((item, index) => (
+                  <div key={index} className="bg-muted/10 rounded-xl border border-border/60 p-6">
+                    <h3 className="text-xl font-bold font-sans mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground font-mono text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-muted-foreground font-mono text-sm mt-6">
+                Les deux projets retenus sont annoncés chaque lundi par email avec les prochaines étapes et le calendrier de réalisation.
+              </p>
+            </section>
+
+            {/* Infos à préparer */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold font-sans mb-6">Les informations à préparer pour le formulaire</h2>
+              <p className="text-muted-foreground font-mono leading-relaxed mb-4">
+                Plus votre candidature est précise, plus elle a de chances d&apos;être retenue. Préparez ces éléments :
+              </p>
+              <ul className="space-y-3 text-muted-foreground font-mono">
+                {["Nom et prénom", "Nom du projet ou de l'activité", "Objectif principal du site", "Public cible et besoins clés", "Contenus disponibles (textes, images, logos)", "Contraintes ou échéances spécifiques"].map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-muted-foreground font-mono text-xs mt-4">
+                Les candidatures complètes reçoivent un accusé de réception sous 24h avec un lien vers le calendrier pour planifier l&apos;appel de cadrage.
+              </p>
             </section>
 
             {/* Qui peut postuler */}
@@ -345,10 +394,10 @@ export default function BlogArticlePage() {
             <section className="mt-16">
               <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold font-sans mb-4">
-                  Prêt à tenter votre chance ?
+                  Prêt à réserver votre créneau ?
                 </h2>
                 <p className="text-xl text-primary-foreground/90 mb-8 font-mono">
-                  Ne manquez pas cette opportunité unique. Les places sont limitées !
+                  Ne manquez pas cette opportunité unique. Seules 2 places sont disponibles chaque semaine !
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -366,7 +415,7 @@ export default function BlogArticlePage() {
                   </Link>
                 </div>
                 <p className="text-primary-foreground/80 mt-6 text-sm font-mono">
-                  4 places disponibles • 100% gratuit • Aucun engagement
+                  2 places par semaine • Livraison en 7 jours • Aucun engagement
                 </p>
               </div>
             </section>

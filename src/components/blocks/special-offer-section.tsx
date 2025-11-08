@@ -40,10 +40,35 @@ export function SpecialOfferSection() {
   ];
 
   const timeline = [
-    { week: "Semaine 1", status: "Gagnant annoncé le lundi", completed: false },
-    { week: "Semaine 2", status: "Gagnant annoncé le lundi", completed: false },
-    { week: "Semaine 3", status: "Gagnant annoncé le lundi", completed: false },
-    { week: "Semaine 4", status: "Gagnant annoncé le lundi", completed: false }
+    {
+      week: "Étape 1",
+      status: "Remplissez le formulaire d'inscription (nom, projet, besoins détaillés)",
+      badge: "Formulaire"
+    },
+    {
+      week: "Étape 2",
+      status: "Sélection transparente : 2 projets retenus par semaine selon l'ordre d'arrivée et la pertinence",
+      badge: "Sélection"
+    },
+    {
+      week: "Étape 3",
+      status: "Appel de lancement sous 48h pour cadrer contenus et objectifs",
+      badge: "Kick-off"
+    },
+    {
+      week: "Étape 4",
+      status: "Livraison du site en 7 jours avec guide de prise en main",
+      badge: "Livraison"
+    }
+  ];
+
+  const applicationFields = [
+    "Nom et prénom",
+    "Nom du projet ou de l'activité",
+    "Objectif principal du site",
+    "Public cible et besoins clés",
+    "Contenus disponibles (textes, images, logos)",
+    "Contraintes ou échéances spécifiques"
   ];
 
   return (
@@ -70,19 +95,19 @@ export function SpecialOfferSection() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-border mb-6"
           >
             <Gift className="w-5 h-5 text-primary" />
-            <span className="text-foreground font-medium">Offre Spéciale Limitée</span>
+            <span className="text-foreground font-medium">2 sites gratuits par semaine</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-sans bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
-            4 Sites Web Gratuits
+            2 Sites Web Gratuits / Semaine
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto font-mono">
-            Un site web offert à une personne différente chaque semaine pendant 1 mois
+            Jusqu'à deux projets sélectionnés chaque semaine pour un accompagnement personnalisé et intensif
           </p>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono">
-            Dans un esprit de <span className="text-primary font-semibold">partage</span> et de <span className="text-primary font-semibold">découverte</span>
+            Dans un esprit de <span className="text-primary font-semibold">partage</span> et de <span className="text-primary font-semibold">découverte</span>, votre site est livré en 7 jours après sélection
           </p>
         </motion.div>
 
@@ -93,13 +118,30 @@ export function SpecialOfferSection() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16 shadow-lg"
         >
-          <div className="flex items-start gap-4 mb-8">
-            <div className="p-3 bg-primary text-primary-foreground rounded-2xl">
-              <Sparkles className="w-8 h-8" />
-            </div>
+          <div className="flex flex-col items-start gap-8 mb-8">
             <div>
               <h2 className="text-3xl font-bold font-sans text-foreground mb-2">L&apos;Offre en Détail</h2>
               <p className="text-muted-foreground font-mono">Tout ce que vous recevrez, gratuitement</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="rounded-2xl border border-border/60 bg-muted/20 p-6 text-left">
+                <div className="flex items-center gap-3 mb-3">
+                  <Users className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold font-sans text-foreground">2 places par semaine</h3>
+                </div>
+                <p className="text-muted-foreground font-mono text-sm">
+                  Pour garantir un suivi sur-mesure, seuls deux sites sont produits chaque semaine. Les candidatures complètes sont traitées par ordre d&apos;arrivée.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border/60 bg-muted/20 p-6 text-left">
+                <div className="flex items-center gap-3 mb-3">
+                  <Clock className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold font-sans text-foreground">Livraison en 7 jours</h3>
+                </div>
+                <p className="text-muted-foreground font-mono text-sm">
+                  Une fois votre projet sélectionné, nous lançons l&apos;atelier de cadrage sous 48h puis livrons votre site clé en main dans un délai maximum de 7 jours.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -155,9 +197,9 @@ export function SpecialOfferSection() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold font-sans text-foreground mb-2 flex items-center justify-center gap-2">
               <Calendar className="w-8 h-8 text-primary" />
-              Planning de l&apos;Offre
+              Processus en 4 étapes
             </h2>
-            <p className="text-muted-foreground font-mono">4 semaines, 4 gagnants</p>
+            <p className="text-muted-foreground font-mono">2 projets accompagnés chaque semaine</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-4">
@@ -171,17 +213,10 @@ export function SpecialOfferSection() {
               >
                 {/* Badge de statut */}
                 <div className="absolute top-3 right-3">
-                  {item.completed ? (
-                    <div className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary rounded-full">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span className="text-xs font-semibold">Réalisé</span>
-                    </div>
-                  ) : (
-                    <div className="inline-flex items-center gap-1 px-2 py-1 bg-muted/50 text-muted-foreground rounded-full">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span className="text-xs font-semibold">En attente</span>
-                    </div>
-                  )}
+                  <div className="inline-flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-full">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span className="text-xs font-semibold">{item.badge}</span>
+                  </div>
                 </div>
 
                 <div className="text-4xl font-bold text-primary mb-2">{index + 1}</div>
@@ -190,6 +225,60 @@ export function SpecialOfferSection() {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Selection transparency */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16"
+        >
+          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Sélection transparente chaque semaine</h2>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            {[{
+              title: "Ordre d'arrivée prioritaire",
+              description: "Les dossiers complets sont évalués dans l'ordre de réception afin de garantir une chance égale à chaque candidature."
+            }, {
+              title: "Critères simples",
+              description: "Pertinence du projet, clarté des besoins et capacité à fournir les contenus essentiels suffisent pour décider."
+            }, {
+              title: "Tirage au sort en cas d'égalité",
+              description: "Si plusieurs projets répondent aux mêmes critères, un tirage au sort est réalisé pour départager de manière équitable."
+            }].map((item, index) => (
+              <div key={index} className="rounded-2xl border border-border/60 bg-background/40 p-6">
+                <h3 className="text-xl font-bold font-sans text-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground font-mono text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-muted-foreground font-mono text-sm text-center mt-8">
+            Les deux projets retenus sont annoncés chaque lundi par email, avec un plan d&apos;action détaillé et les prochaines étapes.
+          </p>
+        </motion.div>
+
+        {/* Application requirements */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16"
+        >
+          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Formulaire d'inscription : les informations essentielles</h2>
+          <p className="text-muted-foreground font-mono text-sm text-center mb-6">
+            Préparez ces éléments pour accélérer votre candidature et faciliter la sélection :
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {applicationFields.map((field, index) => (
+              <div key={index} className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/40 p-4">
+                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-muted-foreground font-mono">{field}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-muted-foreground font-mono text-xs text-center mt-6">
+            Les projets complets reçoivent une réponse sous 24h avec un lien vers le formulaire détaillé et le calendrier de disponibilité.
+          </p>
         </motion.div>
 
         {/* Types of Sites */}
@@ -232,17 +321,17 @@ export function SpecialOfferSection() {
               Intéressé(e) par cette offre ?
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-mono">
-              Contactez-moi pour participer à cette aventure et peut-être être l&apos;un des 4 heureux gagnants !
+              Contactez-moi pour réserver l&apos;une des deux places disponibles cette semaine et recevoir votre site en 7 jours chrono.
             </p>
             <Link
-              href="/contact"
+              href="/offre-speciale/formulaire"
               className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-bold rounded-full hover:bg-background/90 transition-all hover:scale-105 shadow-lg"
             >
               <Gift className="w-5 h-5" />
-              Postuler Maintenant
+              Déposer ma candidature
             </Link>
             <p className="text-primary-foreground/80 mt-6 text-sm font-mono">
-              Places limitées • 100% gratuit • Aucun engagement
+              2 places par semaine • Livraison en 7 jours • Réponse sous 24h
             </p>
           </div>
         </motion.div>
@@ -260,7 +349,7 @@ export function SpecialOfferSection() {
           <p className="max-w-3xl mx-auto">
             Je crois au pouvoir du partage et de l&apos;entraide. 
             Cette initiative me permet de contribuer à votre projet tout en développant mon expertise. 
-            Ensemble, créons quelque chose d&apos;unique !
+            Ensemble, créons quelque chose d&apos;unique, à votre rythme et avec un accompagnement transparent.
           </p>
         </motion.div>
       </div>
