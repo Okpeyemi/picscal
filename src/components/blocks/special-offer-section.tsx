@@ -49,17 +49,17 @@ export function SpecialOfferSection() {
     },
     {
       week: "Étape 2",
-      status: "Sélection transparente : 2 projets retenus par semaine selon l'ordre d'arrivée et la pertinence",
+      status: "Sélection : 1 projet retenu par semaine selon la qualité, la motivation et la préparation",
       badge: "Sélection"
     },
     {
       week: "Étape 3",
-      status: "Appel de lancement sous 48h pour cadrer contenus et objectifs",
-      badge: "Kick-off"
+      status: "Échange pour cadrer le projet et définir les objectifs",
+      badge: "Cadrage"
     },
     {
       week: "Étape 4",
-      status: "Livraison du site en 7 jours avec guide de prise en main",
+      status: "Création et livraison de votre site personnalisé",
       badge: "Livraison"
     }
   ];
@@ -97,19 +97,19 @@ export function SpecialOfferSection() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-border mb-6"
           >
             <Gift className="w-5 h-5 text-primary" />
-            <span className="text-foreground font-medium">2 sites gratuits par semaine</span>
+            <span className="text-foreground font-medium">1 site gratuit par semaine</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-sans bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
-            2 Sites Web Gratuits / Semaine
+            4 Sites Web Gratuits
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto font-mono">
-            Jusqu'à deux projets sélectionnés chaque semaine pour un accompagnement personnalisé et intensif
+            Un site offert chaque semaine pendant 1 mois
           </p>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono">
-            Dans un esprit de <span className="text-primary font-semibold">partage</span> et de <span className="text-primary font-semibold">découverte</span>, votre site est livré en 7 jours après sélection
+            Dans un esprit de <span className="text-primary font-semibold">partage</span> et de <span className="text-primary font-semibold">découverte</span>, je crée votre site personnalisé
           </p>
         </motion.div>
 
@@ -129,10 +129,10 @@ export function SpecialOfferSection() {
               <div className="rounded-2xl border border-border/60 bg-muted/20 p-6 text-left">
                 <div className="flex items-center gap-3 mb-3">
                   <Users className="w-5 h-5 text-primary" />
-                  <h3 className="text-xl font-bold font-sans text-foreground">2 places par semaine</h3>
+                  <h3 className="text-xl font-bold font-sans text-foreground">1 place par semaine</h3>
                 </div>
                 <p className="text-muted-foreground font-mono text-sm">
-                  Pour garantir un suivi sur-mesure, seuls deux sites sont produits chaque semaine. Les candidatures complètes sont traitées par ordre d&apos;arrivée.
+                  Un projet sélectionné chaque semaine pendant 1 mois (4 sites au total). Sélection basée sur les critères de qualité, motivation et préparation.
                 </p>
               </div>
               <div className="rounded-2xl border border-border/60 bg-muted/20 p-6 text-left">
@@ -201,7 +201,7 @@ export function SpecialOfferSection() {
               <Calendar className="w-8 h-8 text-primary" />
               Processus en 4 étapes
             </h2>
-            <p className="text-muted-foreground font-mono">2 projets accompagnés chaque semaine</p>
+            <p className="text-muted-foreground font-mono">1 projet sélectionné chaque semaine</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-4">
@@ -255,7 +255,7 @@ export function SpecialOfferSection() {
             ))}
           </div>
           <p className="text-muted-foreground font-mono text-sm text-center mt-8">
-            Les deux projets retenus sont annoncés chaque lundi par email, avec un plan d&apos;action détaillé et les prochaines étapes.
+            Le projet retenu est annoncé chaque lundi, avec les prochaines étapes pour démarrer la création de votre site.
           </p>
         </motion.div>
 
@@ -266,7 +266,7 @@ export function SpecialOfferSection() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="bg-muted/10 backdrop-blur-sm border border-border/60 rounded-3xl p-8 md:p-12 mb-16"
         >
-          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Formulaire d'inscription : les informations essentielles</h2>
+          <h2 className="text-3xl font-bold font-sans text-foreground mb-6 text-center">Formulaire d&apos;inscription : les informations essentielles</h2>
           <p className="text-muted-foreground font-mono text-sm text-center mb-6">
             Préparez ces éléments pour accélérer votre candidature et faciliter la sélection :
           </p>

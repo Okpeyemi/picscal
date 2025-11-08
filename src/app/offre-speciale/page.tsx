@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import { SpecialOfferSection } from "@/components/blocks/special-offer-section";
 
 export const metadata: Metadata = {
-  title: "Offre Spéciale - 2 Sites Web Gratuits par Semaine",
-  description: "Chaque semaine, je crée gratuitement jusqu'à 2 sites web personnalisés (vitrine, portfolio, blog). Aucune connaissance technique requise. Offre à places limitées pour un accompagnement sur-mesure.",
+  title: "Offre Spéciale - 4 Sites Web Gratuits",
+  description: "Chaque semaine pendant 1 mois, je crée gratuitement un site web personnalisé (vitrine, portfolio, blog). Aucune connaissance technique requise. Dans un esprit de partage et découverte.",
   alternates: {
     canonical: 'https://picscal.maqsoud.tech/offre-speciale',
   },
   openGraph: {
-    title: "Offre Spéciale - 2 Sites Web Gratuits par Semaine | Picscal",
-    description: "Jusqu'à 2 sites web gratuits offerts chaque semaine. Sites vitrines, portfolios ou blogs personnalisés, livrés en 7 jours après sélection.",
+    title: "Offre Spéciale - 4 Sites Web Gratuits | Picscal",
+    description: "Un site web gratuit offert chaque semaine pendant 1 mois. Site vitrine, portfolio ou blog personnalisé, prêt à l'emploi.",
     url: 'https://picscal.maqsoud.tech/offre-speciale',
   },
 };

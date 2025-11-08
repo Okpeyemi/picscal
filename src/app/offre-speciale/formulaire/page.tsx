@@ -25,16 +25,16 @@ import {
 import { AnimatedGroup } from "@/components/ui/animated-group";
 
 export const metadata: Metadata = {
-  title: "Candidature Offre Spéciale - 2 Sites Web Gratuits",
+  title: "Candidature Offre Spéciale - 4 Sites Web Gratuits",
   description:
-    "Remplissez le formulaire de candidature pour l'offre spéciale Picscal. 2 sites web gratuits par semaine, livraison en 7 jours après sélection.",
+    "Remplissez le formulaire de candidature pour l'offre spéciale Picscal. 1 site web gratuit par semaine pendant 1 mois (4 sites au total).",
   alternates: {
     canonical: "https://picscal.maqsoud.tech/offre-speciale/formulaire",
   },
   openGraph: {
-    title: "Formulaire Offre Spéciale | 2 Sites Web Gratuits",
+    title: "Formulaire Offre Spéciale | 4 Sites Web Gratuits",
     description:
-      "Posez votre candidature pour bénéficier d'un site web gratuit. 2 places disponibles par semaine, sélection transparente.",
+      "Posez votre candidature pour bénéficier d'un site web gratuit. 4 places disponibles au total, 1 site par semaine pendant 1 mois.",
     url: "https://picscal.maqsoud.tech/offre-speciale/formulaire",
   },
 };
@@ -69,20 +69,20 @@ export default function OffreSpecialeFormPage() {
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-mono"
           >
             <ArrowLeft className="w-4 h-4" />
-            Retour à l'offre
+            Retour à l&apos;offre
           </Link>
 
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-primary/10 text-primary font-medium">
                 <Sparkles className="w-4 h-4" />
-                Offre limitée : 2 sites gratuits par semaine
+                Offre limitée : 1 site gratuit par semaine
               </div>
               <h1 className="text-4xl md:text-5xl font-bold font-sans">
                 Formulaire de candidature
               </h1>
               <p className="text-muted-foreground text-lg font-mono max-w-2xl">
-                Remplissez ce formulaire pour déposer votre candidature. Deux projets sont sélectionnés chaque semaine selon l'ordre d'arrivée, la clarté des besoins et la faisabilité. Si votre dossier est retenu, votre site est livré sous 7 jours après l'appel de cadrage.
+                Remplissez ce formulaire pour déposer votre candidature. Un projet est sélectionné chaque semaine pendant 1 mois (4 sites au total) selon la qualité du projet, la motivation et la préparation.
               </p>
             </div>
             <div className="rounded-2xl border border-primary/20 bg-primary/10 p-6 max-w-sm">
@@ -223,7 +223,7 @@ export default function OffreSpecialeFormPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="discovery">Comment avez-vous connu l'offre ?</Label>
+                  <Label htmlFor="discovery">Comment avez-vous connu l&apos;offre ?</Label>
                   <Input
                     id="discovery"
                     name="discovery"
@@ -232,7 +232,7 @@ export default function OffreSpecialeFormPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Un dernier mot pour l'équipe Picscal ?</Label>
+                  <Label htmlFor="message">Un dernier mot pour l&apos;équipe Picscal ?</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -280,7 +280,7 @@ export default function OffreSpecialeFormPage() {
             </div>
 
             <div className="bg-primary text-primary-foreground rounded-3xl p-6 space-y-4">
-              <h2 className="text-xl font-bold font-sans">Besoin d'aide immédiate ?</h2>
+              <h2 className="text-xl font-bold font-sans">Besoin d&apos;aide immédiate ?</h2>
               <p className="text-sm font-mono text-primary-foreground/90">
                 Pour toute question avant de déposer votre dossier, contactez-moi directement.
               </p>
